@@ -19,7 +19,7 @@ let d = document.getElementById('d');
 let e = document.getElementById('e');
 let f = document.getElementById('f');
 let g = document.getElementById('g');
-// open
+
 opn.addEventListener('click', function() {
   navi.style.display = 'block';
   a.style.display = 'none';
@@ -34,7 +34,7 @@ opn.addEventListener('click', function() {
     b.classList.remove('animate-bounce');
   }, 800);
 });
-// home
+
 nav_a.addEventListener('click', function() {
   a.style.display = 'none';
   b.style.display = 'block';
@@ -48,7 +48,7 @@ nav_a.addEventListener('click', function() {
     b.classList.remove('animate-bounce');
   }, 800);
 });
-// nilam
+
 nav_b.addEventListener('click', function() {
   a.style.display = 'none';
   b.style.display = 'none';
@@ -62,7 +62,7 @@ nav_b.addEventListener('click', function() {
     b.classList.remove('animate-bounce');
   }, 800);
 });
-// farhan
+
 nav_c.addEventListener('click', function() {
   a.style.display = 'none';
   b.style.display = 'none';
@@ -76,7 +76,7 @@ nav_c.addEventListener('click', function() {
     b.classList.remove('animate-bounce');
   }, 800);
 });
-// jadwal
+
 nav_d.addEventListener('click', function() {
   a.style.display = 'none';
   b.style.display = 'none';
@@ -91,7 +91,7 @@ nav_d.addEventListener('click', function() {
   }, 800);
 });
 
-// al
+
 nav_e.addEventListener('click', function() {
   a.style.display = 'none';
   b.style.display = 'none';
@@ -106,8 +106,9 @@ nav_e.addEventListener('click', function() {
   }, 800);
 });
 
-// map
-nav_f.addEventListener('click', function() {
+
+nav_f.addEventListener('click', function(event) {
+  event.preventDefault();
   a.style.display = 'none';
   b.style.display = 'none';
   c.style.display = 'none';
@@ -115,8 +116,11 @@ nav_f.addEventListener('click', function() {
   e.style.display = 'none';
   f.style.display = 'none';
   g.style.display = 'block';
-  b.classList.add('animate-bounce'); 
+  b.classList.add('animate-bounce');
   setTimeout(function() {
     b.classList.remove('animate-bounce');
   }, 800);
+  setTimeout(function() {
+    location.href = 'https://maps.app.goo.gl/paqC6iDgVHVFWpHT6';
+  }, 2000);
 });
